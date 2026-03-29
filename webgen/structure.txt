@@ -1,0 +1,106 @@
+
+com/webgen/
+          - body/
+          - css/
+          - head/
+          - js/
+          Browser.java
+          ChromeBrowser.java
+          FirefoxBrowser.java
+          LiveServer.java
+          WebGen.java
+
+Struktur folder
+
+##
+1. Struktur asas (Simple website) Beginner
+
+/website
+|-- index.html       -> Halaman utama
+|-- /css             -> Semua design
+    |-- style.css
+|-- /js              -> Semua JavaScript
+    |-- script.js
+|-- /images          -> Gambar
+    |-- logo.png
+
+##
+2. Struktur lebih kemas (Standard developer) Project besar sikit
+
+/website
+|-- index.html
+|-- about.html
+|-- contact.html
+|-- /assets          -> Semua file static dalam assets
+    |-- /css
+    |-- /js
+    |-- /images
+    |-- /fonts
+|-- /components      -> Komponen reusable dalam components
+    |-- navbar.html
+    |-- footer.html
+|-- /pages
+    |-- shop.html
+|-- /data           -> data asing dalam data
+    |-- data.json
+
+##
+3. Struktur professional (Full stack website) Ada backend (login, database, API)
+
+/website
+|-- /public                   -> user boleh access (frontend)
+    |-- index.html
+    |-- /assets
+        |-- /css
+        |-- /js
+        |-- /images
+        |-- /fonts
+|-- /src                      -> logic backend
+    |-- /controllers
+    |-- /models
+    |-- /routes
+    |-- /services
+|-- /config                   -> setting database
+    |-- database.js
+|-- /views                    -> page dinamik
+    |-- login.html
+    |-- dashboard.html
+|-- .env                      -> simpan password/API key
+|-- package.json / pom.xml
+
+##
+4. Directory penting yang WAJIB faham
+Paling penting dalam semua website:
+
+<> /public atau /www          -> Root website (yang user nampak)
+
+<> /assets                     -> Semua resource: CSS, JS, images, fonts
+
+<> /images                     -> Simpan gambar saja
+
+<> /js                         -> logic JavaScript
+
+<> /css                        -> styling
+
+##
+5. Security penting (ramai tidak tahu)
+Jangan letak dalam /public
+
+<x> Database file
+<x> .env
+<x> Backend code
+
+>> Sebab semua boleh diakses jika tidak secure
+
+## CADANGAN (best setup)
+
+/website
+|-- index.html
+|-- /assets
+    |-- /css
+        |-- style.css
+    |-- /js
+        |-- script.js
+    |-- /images
+    |-- /fonts
+
